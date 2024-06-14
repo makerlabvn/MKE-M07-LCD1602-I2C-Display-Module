@@ -107,12 +107,12 @@ body {
 // }
     
 nav {
-  width: 230px;
+  width: 330px;       // width: 230px;
   height: 430px;
   position: fixed; // position: fixed;
   overflow-y: auto; /* Cho phép cuộn nội dung theo chiều dọc nếu quá dài */
   top: 180px;    //top: 220px;
-  left:50%;
+  left:43%;        // 50%
   margin-left:-580px;
   text-align: left;
 
@@ -125,30 +125,96 @@ nav {
     li {
       padding: 5px 0px;
       line-height: 16px;
-      // padding-right:17px;
-      // position:relative;
-      // right:-12px;
-
+    
       &.tag-h1 {
         font-size: 1.2em;
-
+    
         a {
           font-weight: bold;
           color: #333;
         }
-
-        + .tag-h2 {
-
-        }
       }
-
+    
       &.tag-h2 {
-
-        + .tag-h1 {
-          margin-top:10px;
-        }
+        font-size: 1em;
+        padding-left: 15px; // Dịch phần tử .tag-h2 qua phải 15px
+          &::before {
+              content: "- ";
+            }
+      }
+    
+      &.tag-h3 {
+          font-size: 0.9em;
+        padding-left: 30px; // Dịch phần tử .tag-h3 qua phải 30px
+          &::before {
+              content: "+ ";
+            }
+      }
+    
+      &.tag-h4 {
+          font-size: 0.8em;
+        padding-left: 45px; // Dịch phần tử .tag-h4 qua phải 45px
+          &::before {
+              content: "* ";
+            }
       }
     }
+      
+      // Lan 1 ok voi H1,H2
+//     li {
+//   padding: 5px 0px;
+//   line-height: 16px;
+
+//   &.tag-h1 {
+//     font-size: 1.2em;
+
+//     a {
+//       font-weight: bold;
+//       color: #333;
+//     }
+
+//     + .tag-h2 {
+
+//     }
+//   }
+
+//   &.tag-h2 {
+//     padding-left: 15px; // Dịch phần tử .tag-h2 qua phải 5px
+
+//     + .tag-h1 {
+//       margin-top:10px;
+//     }
+//   }
+// }
+
+    // Gốc
+    // li {
+    //   padding: 5px 0px;
+    //   line-height: 16px;
+    //   // padding-right:17px;
+    //   // position:relative;
+    //   // right:-12px;
+
+    //   &.tag-h1 {
+    //     font-size: 1.2em;
+
+    //     a {
+    //       font-weight: bold;
+    //       color: #333;
+    //     }
+
+    //     + .tag-h2 {
+
+    //     }
+    //   }
+
+    //   &.tag-h2 {
+
+    //     + .tag-h1 {
+    //       margin-top:10px;
+    //     }
+    //   }
+    // }
 
     a {
       color: #666;
